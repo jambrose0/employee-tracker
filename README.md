@@ -1,11 +1,5 @@
 # employee-tracker
 
-Step 1:
-Download npm packages: inquirer, express, and mysql2
-
-Step 2:
-Create inquirer questions that to retrieve employee info (first&last name, position, department, salary, supervisor)
-
 Step 3:
 Inquirer questions from mock-up:
 
