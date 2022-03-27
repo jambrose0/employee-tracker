@@ -15,17 +15,19 @@ const gatherInfo = (data) => {
         name: "action",
         message: "What would you like to do?",
         choices: [
+          "View All Employees",
           "Add Employee",
+          "Update Employee Role",
+          "View All Roles",
+          "Add Role",
+          "View All Departments",
           "Add Department",
-          "Add role",
-          "Update Employee",
-          "View Department",
-          "View Roles",
+          "Quit",
         ],
       },
     ])
     .then((answers) => {
-      if (answers.action === "View Department") {
+      if (answers.action === "View All Employees") {
         console.log("Heres the department:");
         const sql = `SELECT * FROM departments`;
         db.query(sql, (err, rows) => {
