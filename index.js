@@ -26,8 +26,8 @@ const manageEmployees = () => {
           manageEmployees();
         });
       } else if (manage === "Add a Department") {
-        addDepartment().then((res) => {
-          console.table(res);
+        addDepartment().then(() => {
+          console.table("Department added!");
           manageEmployees;
         });
       } else if (manage === "View all Roles") {
@@ -36,8 +36,8 @@ const manageEmployees = () => {
           manageEmployees;
         });
       } else if (manage === "Add a Role") {
-        addRole().then((res) => {
-          console.table(res);
+        addRole().then(() => {
+          console.table("Role added!");
           manageEmployees;
         });
       } else if (manage === "View all Employees") {
@@ -46,13 +46,13 @@ const manageEmployees = () => {
           manageEmployees;
         });
       } else if (manage === "Add an Employee") {
-        addEmployee().then((res) => {
-          console.table(res);
+        addEmployee().then(() => {
+          console.table("Role added!");
           manageEmployees;
         });
       } else if (manage === "Edit an Employee") {
-        addDepartment().then((res) => {
-          console.table(res);
+        addDepartment().then(() => {
+          console.table("Employee Edited!");
           manageEmployees;
         });
       }
