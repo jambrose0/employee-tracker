@@ -1,2 +1,7 @@
 .vscode/
+<<<<<<< HEAD
 node_modules/
+=======
+node_modules/
+.env
+>>>>>>> feature/server

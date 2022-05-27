@@ -1,6 +1,31 @@
 {
+<<<<<<< HEAD
   "dependencies": {
     "inquirer": "^8.2.1",
+=======
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "Developers frequently have to create interfaces that allow non-developers to easily view and interact with information stored in databases. These interfaces are called **content management systems (CMS)**. Your assignment this week is to build a command-line application from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:seed": "./node_modules/.bin/db_seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jambrose0/employee-tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jambrose0/employee-tracker/issues"
+  },
+  "homepage": "https://github.com/jambrose0/employee-tracker#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "dotenv": "^16.0.1",
+    "inquirer": "^8.2.4",
+>>>>>>> feature/server
     "mysql2": "^2.3.3"
   }
 }
