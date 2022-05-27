@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-# employee-tracker
-
-Step 1:
-Download npm packages: inquirer, express, and mysql2
-
-Step 2:
-Create inquirer questions that to retrieve employee info (first&last name, position, department, salary, supervisor)
-
-Step 3:
-Inquirer questions from mock-up:
-
-- what would you like to do? => Add department
-- Name of the department?
-- What would you like to do? => Add role
-- Name of the role? => Customer Service
-- Salary?
-- which department is this? => Service
-- What would you like to do? => Add employee
-- Employee first name?
-- employee last name?
-- Employee role?
-- Employee's manager?
-- What would you like to do? => Update employee role
-- Which employee role update? => list of employees to update
-
-Step 4:
-Parse data from inquirer into sql tables
-=======
 # 12 SQL: Employee Tracker
 
 Developers frequently have to create interfaces that allow non-developers to easily view and interact with information stored in databases. These interfaces are called **content management systems (CMS)**. Your assignment this week is to build a command-line application from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL.
@@ -83,33 +54,33 @@ Design the database schema as shown in the following image:
 
 As the image illustrates, your schema should contain the following three tables:
 
-* `department`
+- `department`
 
-  * `id`: `INT PRIMARY KEY`
+  - `id`: `INT PRIMARY KEY`
 
-  * `name`: `VARCHAR(30)` to hold department name
+  - `name`: `VARCHAR(30)` to hold department name
 
-* `role`
+- `role`
 
-  * `id`: `INT PRIMARY KEY`
+  - `id`: `INT PRIMARY KEY`
 
-  * `title`: `VARCHAR(30)` to hold role title
+  - `title`: `VARCHAR(30)` to hold role title
 
-  * `salary`: `DECIMAL` to hold role salary
+  - `salary`: `DECIMAL` to hold role salary
 
-  * `department_id`: `INT` to hold reference to department role belongs to
+  - `department_id`: `INT` to hold reference to department role belongs to
 
-* `employee`
+- `employee`
 
-  * `id`: `INT PRIMARY KEY`
+  - `id`: `INT PRIMARY KEY`
 
-  * `first_name`: `VARCHAR(30)` to hold employee first name
+  - `first_name`: `VARCHAR(30)` to hold employee first name
 
-  * `last_name`: `VARCHAR(30)` to hold employee last name
+  - `last_name`: `VARCHAR(30)` to hold employee last name
 
-  * `role_id`: `INT` to hold reference to employee role
+  - `role_id`: `INT` to hold reference to employee role
 
-  * `manager_id`: `INT` to hold reference to another employee that is the manager of the current employee (`null` if the employee has no manager)
+  - `manager_id`: `INT` to hold reference to another employee that is the manager of the current employee (`null` if the employee has no manager)
 
 You might want to use a separate file that contains functions for performing specific SQL queries you'll need to use. A constructor function or class could be helpful for organizing these. You might also want to include a `seeds.sql` file to pre-populate your database, making the development of individual features much easier.
 
@@ -117,24 +88,24 @@ You might want to use a separate file that contains functions for performing spe
 
 Try to add some additional functionality to your application, such as the ability to do the following:
 
-* Update employee managers.
+- Update employee managers.
 
-* View employees by manager.
+- View employees by manager.
 
-* View employees by department.
+- View employees by department.
 
-* Delete departments, roles, and employees.
+- Delete departments, roles, and employees.
 
-* View the total utilized budget of a department&mdash;in other words, the combined salaries of all employees in that department.
+- View the total utilized budget of a department&mdash;in other words, the combined salaries of all employees in that department.
 
 ## Review
 
 You are required to submit BOTH of the following for review:
 
-* A walkthrough video demonstrating the functionality of the application.
+- A walkthrough video demonstrating the functionality of the application.
 
-* The URL of the GitHub repository, with a unique name and a README describing the project.
+- The URL of the GitHub repository, with a unique name and a README describing the project.
 
-- - -
+---
+
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
->>>>>>> feature/server
