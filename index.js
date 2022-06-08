@@ -179,69 +179,69 @@ const viewEmployees = () => {
     });
 };
 
-const addEmployee = () => {
-    db.query('SELECT * FROM roles', (err, results) => {
-        if(err) throw err;
+// const addEmployee = () => {
+//     db.query('SELECT * FROM roles', (err, results) => {
+//         if(err) throw err;
 
-   inquirer.prompt([
-    {
-        name: 'roles',
-        type: "list",
-        choices: function () {
-            const rolesArray = [];
-            results.forEach(({ id, name }) => {
-                rolesArray.push({
-                    name: role_name,
-                    value: id,
-                });
-            });
-            return rolesArray;
-        };
-        },
-        {
-            name: 'first_name',
-            type: 'input',
-            message: 'First Name:'
-        },
-        {
-            name: 'last_name',
-            type: 'input',
-            message: 'Last name:'
+//    inquirer.prompt([
+//     {
+//         name: 'roles',
+//         type: "list",
+//         choices: function () {
+//             const rolesArray = [];
+//             results.forEach(({ id, name }) => {
+//                 rolesArray.push({
+//                     name: role_name,
+//                     value: id,
+//                 });
+//             });
+//             return rolesArray;
+//         };
+//         },
+//         {
+//             name: 'first_name',
+//             type: 'input',
+//             message: 'First Name:'
+//         },
+//         {
+//             name: 'last_name',
+//             type: 'input',
+//             message: 'Last name:'
 
-        },
-        {
-            name: 'manager_id',
-            type: 'input',
-            message: 'Who is this Employees Manager?'
-        }
-    }
-])
-.then((response) => {
-    db.query(
-        'INSERT INTO employees SET ?',
-        {
-            first_name: response.first_name,
-            last_name: response.last_name,
-            manager_id: response.manager_id
-        },
-        (err, res) => {
-            if(err) throw err;
-            console.log('');
-            console.log('Employee Added!');
-            console.log('');
-            
-        }
-    )
-})
+//         },
+//         {
+//             name: 'manager_id',
+//             type: 'input',
+//             message: 'Who is this Employees Manager?'
+//         }
+//     }
+// ])
+// .then((response) => {
+//     db.query(
+//         'INSERT INTO employees SET ?',
+//         {
+//             first_name: response.first_name,
+//             last_name: response.last_name,
+//             manager_id: response.manager_id
+//         },
+//         (err, res) => {
+//             if(err) throw err;
+//             console.log('');
+//             console.log('Employee Added!');
+//             console.log('');
 
-const editEmployee = () => {
-    db.query('SELECT * FROM employees', (err, results) => {
-        if(err) throw err;
+//         }
+//     )
+// })
 
-        inquirer.prompt([
-            {
-                name:
-            }
-        ])
-    })
-}
+// const editEmployee = () => {
+//     db.query('SELECT * FROM employees', (err, results) => {
+//         if(err) throw err;
+
+//         inquirer.prompt([
+//             {
+//                 name:
+//             }
+//         ])
+//     })
+// }
