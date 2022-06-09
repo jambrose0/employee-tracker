@@ -1,8 +1,5 @@
 INSERT INTO departments (dept_name)
 VALUES
-<<<<<<< HEAD
-('')
-=======
 ('Sales'),
 ('Engineering'),
 ('Finance'),
@@ -32,4 +29,3 @@ VALUES
 
 
 
->>>>>>> feature/server
