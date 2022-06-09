@@ -246,3 +246,5 @@ const viewEmployees = () => {
 //         ])
 //     })
 // }
+
+manageEmployees();
