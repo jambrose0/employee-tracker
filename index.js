@@ -80,8 +80,9 @@ const viewDepartments = () => {
   return db
     .promise()
     .query("SELECT * FROM departments")
-    .then(() => {
-      console.log("here are the departments");
+    .then(([rows, fields]) => {
+      // console.log("here are the departments");
+      console.table("Departments:", rows);
     });
 
   // db.promise()
