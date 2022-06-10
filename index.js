@@ -73,8 +73,7 @@ const manageEmployees = () => {
 //view  departments and add departments
 const viewDepartments = () => {
   // console.log("here are the departments");
-  return db
-    .promise()
+  db.promise()
     .query("SELECT * FROM departments")
     .then(([rows, fields]) => {
       // console.log("here are the departments");
